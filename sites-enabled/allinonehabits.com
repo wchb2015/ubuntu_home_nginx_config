@@ -1,1 +1,1 @@
-/etc/nginx/sites-available/allinonehabits.com
+../sites-available/allinonehabits.com
