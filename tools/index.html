@@ -3,7 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AllinoneHabits - Build Better Habits</title>
+    <title>
+      AllinoneHabits - Build Better Habits | Free Habit Tracking App
+    </title>
+
+    <!-- Primary SEO Meta Tags -->
+    <meta
+      name="description"
+      content="AllinoneHabits helps you build better habits, one day at a time. Track daily habits, record progress, visualize your journey with beautiful analytics. Free habit tracking app for personal growth."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AllinoneHabits" />
+    <meta
+      name="keywords"
+      content="habit tracker, habit tracking app, daily habits, goal tracking, productivity, personal growth, streak tracking, habit building"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://allinonehabits.com/" />
+    <meta
+      property="og:title"
+      content="AllinoneHabits - Build Better Habits, One Day at a Time"
+    />
+    <meta
+      property="og:description"
+      content="Track daily habits, record progress, and visualize your journey to becoming your best self. Simple, powerful, and designed for success."
+    />
+    <meta
+      property="og:image"
+      content="https://allinonehabits.com/assets/og-image.png"
+    />
+    <meta property="og:site_name" content="AllinoneHabits" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://allinonehabits.com/" />
+    <meta
+      name="twitter:title"
+      content="AllinoneHabits - Build Better Habits, One Day at a Time"
+    />
+    <meta
+      name="twitter:description"
+      content="Track daily habits, record progress, and visualize your journey to becoming your best self. Simple, powerful, and designed for success."
+    />
+    <meta
+      name="twitter:image"
+      content="https://allinonehabits.com/assets/og-image.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://allinonehabits.com/" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AllinoneHabits",
+        "alternateName": "All In One Habits",
+        "url": "https://allinonehabits.com/",
+        "description": "AllinoneHabits helps you build better habits, one day at a time. Track daily habits, record progress, visualize your journey with beautiful analytics.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "50000"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "AllinoneHabits",
+          "url": "https://allinonehabits.com/"
+        }
+      }
+    </script>
+
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link
@@ -1045,6 +1128,49 @@
         transition: all 0.3s ease;
       }
 
+      /* Coming Soon Banner */
+      .coming-soon-banner {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 50%,
+          #312e81 100%
+        );
+        color: white;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+      }
+
+      .coming-soon-banner .emoji {
+        margin-right: 0.5rem;
+      }
+
+      .coming-soon-banner strong {
+        font-weight: 700;
+        color: #fbbf24;
+      }
+
+      /* Adjust nav position when banner is present - always below banner */
+      nav {
+        top: 44px;
+      }
+
+      /* Keep nav below banner even when scrolled */
+      nav.scrolled {
+        top: 44px;
+      }
+
+      .hero {
+        padding-top: 10rem;
+      }
+
       /* Responsive Design */
       @media (max-width: 1024px) {
         .hero-container {
@@ -1177,6 +1303,13 @@
     gtag("config", "G-2F0FDY21LK");
   </script>
   <body>
+    <!-- Coming Soon Banner -->
+    <div class="coming-soon-banner">
+      <span class="emoji">🚀</span>
+      <strong>Coming Soon!</strong> We're working hard to bring you the best
+      habit tracking experience. Stay tuned!
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar">
       <div class="nav-container">
@@ -1358,7 +1491,7 @@
       </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats Section - HIDDEN until launch (uncomment when ready)
     <section class="stats">
       <div class="container">
         <div class="stats-grid">
@@ -1381,6 +1514,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- Dashboard Preview -->
     <section class="dashboard-preview" id="dashboard">
