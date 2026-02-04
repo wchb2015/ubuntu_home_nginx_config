@@ -3,7 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HabitFlow - Build Better Habits</title>
+    <title>AllinoneHabits - Build Better Habits</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/icon-180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/icons/icon-192.png"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -91,13 +116,16 @@
       .logo-icon {
         width: 36px;
         height: 36px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 1.2rem;
+        overflow: hidden;
+      }
+
+      .logo-icon img {
+        width: 100%;
+        height: 100%;
       }
 
       .nav-links {
@@ -1135,20 +1163,27 @@
     </style>
   </head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F0FDY21LK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-2F0FDY21LK"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-2F0FDY21LK');
-</script>
+    gtag("config", "G-2F0FDY21LK");
+  </script>
   <body>
     <!-- Navigation -->
     <nav id="navbar">
       <div class="nav-container">
         <a href="#" class="logo">
-          <div class="logo-icon">📊</div>
+          <div class="logo-icon">
+            <img src="logo.svg" alt="AllInOneHabits Logo" />
+          </div>
           Allinone Habits
         </a>
         <div class="nav-links" id="navLinks">
@@ -1439,8 +1474,10 @@
       <div class="footer-content">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="logo-icon">📊</div>
-            HabitFlow
+            <div class="logo-icon">
+              <img src="logo.svg" alt="AllInOneHabits Logo" />
+            </div>
+            AllinoneHabits
           </div>
           <p>
             Building better habits, one day at a time. Your personal companion
@@ -1476,7 +1513,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 HabitFlow. All rights reserved.</p>
+        <p>© 2026 AllinoneHabits. All rights reserved.</p>
         <div class="social-links">
           <a href="#">𝕏</a>
           <a href="#">in</a>
@@ -1540,5 +1577,3 @@
     </script>
   </body>
 </html>
-
-
