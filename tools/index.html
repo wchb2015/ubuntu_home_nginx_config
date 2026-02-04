@@ -1190,7 +1190,12 @@
           <a href="#features">Features</a>
           <a href="#how-it-works">How It Works</a>
           <a href="#dashboard">Dashboard</a>
-          <a href="#" class="nav-cta">Get Started</a>
+          <a
+            href="#"
+            class="nav-cta"
+            onclick="trackButtonClick('nav_get_started', 'Navigation')"
+            >Get Started</a
+          >
         </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn">
           <span></span>
@@ -1212,8 +1217,20 @@
             for success.
           </p>
           <div class="hero-buttons">
-            <a href="#" class="btn btn-primary"> 🚀 Start Free Today </a>
-            <a href="#features" class="btn btn-secondary"> Learn More → </a>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="trackButtonClick('hero_start_free', 'Hero')"
+            >
+              🚀 Start Free Today
+            </a>
+            <a
+              href="#features"
+              class="btn btn-secondary"
+              onclick="trackButtonClick('hero_learn_more', 'Hero')"
+            >
+              Learn More →
+            </a>
           </div>
         </div>
         <div class="hero-visual">
@@ -1463,8 +1480,18 @@
           their goals. Start your journey today — it's completely free!
         </p>
         <div class="cta-buttons">
-          <a href="#" class="btn btn-primary">🚀 Get Started Free</a>
-          <a href="#" class="btn btn-secondary">📱 Download App</a>
+          <a
+            href="#"
+            class="btn btn-primary"
+            onclick="trackButtonClick('cta_get_started', 'CTA')"
+            >🚀 Get Started Free</a
+          >
+          <a
+            href="#"
+            class="btn btn-secondary"
+            onclick="trackButtonClick('cta_download_app', 'CTA')"
+            >📱 Download App</a
+          >
         </div>
       </div>
     </section>
@@ -1574,6 +1601,16 @@
           }
         });
       });
+
+      // Google Analytics Event Tracking for Button Clicks
+      function trackButtonClick(buttonName, buttonCategory) {
+        gtag("event", "button_click", {
+          event_category: buttonCategory || "CTA",
+          event_label: buttonName,
+          value: 1,
+        });
+        console.log("GA Event:", buttonName, buttonCategory);
+      }
     </script>
   </body>
 </html>
